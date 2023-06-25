@@ -1,0 +1,35 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:PulsarUI"
+             x:Class="PulsarUI.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+        <StyleInclude Source="/Controls/TimingData.axaml"/>
+        <StyleInclude Source="/Controls/SensorLabel.axaml"/>
+        <StyleInclude Source="/Controls/SensorIcon.axaml"/>
+        <StyleInclude Source="/Icons.axaml"/>
+        <StyleInclude Source="/Controls/SysStatusLabel.axaml"/>
+        <StyleInclude Source="/Controls/CompetitorInfo.axaml"/>
+        <StyleInclude Source="/Controls/EnterPairControl.axaml"/>
+        <StyleInclude Source="/Controls/FunctionButton.axaml"/>
+        <StyleInclude Source="/Controls/TitleBar.axaml"/>
+        <StyleInclude Source="/Controls/RunSetupLabel.axaml"/>
+        <StyleInclude Source="/TextStyles.axaml"/>
+    </Application.Styles>
+    
+    <Application.Resources>
+        <SolidColorBrush x:Key="StandardLabelColour" Color="#D0D0D0"/>
+        <SolidColorBrush x:Key="DimLabelColour" Color="#909090"/>
+        <SolidColorBrush x:Key="TitleBackground" Color="#3B3B3B"/>
+        <SolidColorBrush x:Key="DetailBackground" Color="#303030"/>
+        <SolidColorBrush x:Key="SysEngagedBackground" Color="#0000FF"/>
+        <SolidColorBrush x:Key="RunActiveBackground" Color="#00FF00"/>
+        <SolidColorBrush x:Key="ErrorColour" Color="#FF0000"/>
+        <SolidColorBrush x:Key="OkColour" Color="#00FF00"/>
+        <SolidColorBrush x:Key="DisabledColour" Color="#696969"/>
+    </Application.Resources>
+</Application>

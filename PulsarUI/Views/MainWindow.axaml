@@ -1,0 +1,219 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PulsarUI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:PulsarUI"
+        xmlns:unicode="clr-namespace:Avalonia.Media.TextFormatting.Unicode;assembly=Avalonia.Visuals"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="768"
+        x:Class="PulsarUI.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="PulsarUI"
+        Background="#252525">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <!-- Main Grid -->
+    <Viewbox Stretch="Uniform" StretchDirection="Both">
+        <Grid ColumnDefinitions="*,Auto,*" RowDefinitions="Auto,*,Auto,Auto,Auto,Auto,Auto" Margin="1">
+        <!-- Title Bar -->
+        <controls:TitleBar Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Classes="Top" TBLeft="2023-03-11 06:27:43"
+                           TBCategory="Outlaw Flat Four" TBRound="Qualifying Round 1" />
+
+        <!-- Left lane timing data -->
+        <Grid Grid.Row="1" Grid.Column="0" Margin="1,1,1,1" Background="{DynamicResource DetailBackground}"
+              RowDefinitions="Auto,*,*,*,*,*,*,*,*,*,*,*,*,*,*">
+            <controls:CompetitorInfo Grid.Column="0" Grid.Row="0"
+                                     CIRaceNum="4189" CIIndex="14.89" CIClass="SP/ET" CIName="Jon Webster" CIModel="Mustang" CIBackground="{DynamicResource TitleBackground}" />
+            <controls:TimingData Grid.Row="1" TimingLabel="Reaction Time" TimingValue="+3.0256" />
+            <controls:TimingData Grid.Row="2" TimingLabel="18.288m ET" TimingValue="0.9108" />
+            <controls:TimingData Grid.Row="3" TimingLabel="100.584m ET" TimingValue="2.3207" />
+            <controls:TimingData Grid.Row="4" TimingLabel="181.051m ET" TimingValue="3.1796" />
+            <controls:TimingData Grid.Row="5" TimingLabel="201.165m ET" TimingValue="3.3671" />
+            <controls:TimingData Grid.Row="6" TimingLabel="201.165m km/h" TimingValue="385.13" />
+            <controls:TimingData Grid.Row="7" TimingLabel="284.683m ET" TimingValue="4.0740" />
+            <controls:TimingData Grid.Row="8" TimingLabel="304.800m ET" TimingValue="4.2289" />
+            <controls:TimingData Grid.Row="9" TimingLabel="304.800m km/h" TimingValue="467.50" />
+            <controls:TimingData Grid.Row="10" TimingLabel="382.219m ET" TimingValue="4.8217" />
+            <controls:TimingData Grid.Row="11" TimingLabel="402.336m ET" TimingValue="4.9766" Classes="Finish" />
+            <controls:TimingData Grid.Row="12" TimingLabel="402.336m km/h" TimingValue="467.53" Classes="Finish" />
+            <controls:TimingData Grid.Row="13" TimingLabel="Result" TimingValue="WIN" Classes="Finish" />
+        </Grid>
+
+        <!-- System status -->
+        <Grid Grid.Row="1" Grid.Column="1" Background="{DynamicResource TitleBackground}" RowDefinitions="*" Margin="0,1,0,1">
+            <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto"
+                  RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*">
+
+                <controls:SysStatusLabel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Classes="SysEng" />
+
+                <controls:SensorIcon Grid.Row="1" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="1" Grid.Column="1" Classes="Enabled"
+                                      SensorLabelText="Pre-Stage" />
+                <controls:SensorIcon Grid.Row="1" Grid.Column="2" Classes="Blocked" />
+
+                <controls:SensorIcon Grid.Row="2" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="2" Grid.Column="1" Classes="Enabled"
+                                      SensorLabelText="Stage Lock" />
+                <controls:SensorIcon Grid.Row="2" Grid.Column="2" Classes="Blocked" />
+
+                <controls:SensorIcon Grid.Row="3" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="3" Grid.Column="1" Classes="Enabled" SensorLabelText="Stage" />
+                <controls:SensorIcon Grid.Row="3" Grid.Column="2" Classes="Blocked" />
+
+                <controls:SensorIcon Grid.Row="4" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="4" Grid.Column="1" Classes="Enabled" SensorLabelText="Guard" />
+                <controls:SensorIcon Grid.Row="4" Grid.Column="2" Classes="OK" />
+
+                <controls:SensorIcon Grid.Row="5" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="5" Grid.Column="1" Classes="Enabled" SensorLabelText="18.288m" />
+                <controls:SensorIcon Grid.Row="5" Grid.Column="2" Classes="OK" />
+
+                <controls:SensorIcon Grid.Row="6" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="6" Grid.Column="1" Classes="Enabled" SensorLabelText="80.467m" />
+                <controls:SensorIcon Grid.Row="6" Grid.Column="2" Classes="OK" />
+
+                <controls:SensorIcon Grid.Row="7" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="7" Grid.Column="1" Classes="Enabled" SensorLabelText="100.584m" />
+                <controls:SensorIcon Grid.Row="7" Grid.Column="2" Classes="OK" />
+
+                <controls:SensorIcon Grid.Row="8" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="8" Grid.Column="1" Classes="Enabled" SensorLabelText="181.051m" />
+                <controls:SensorIcon Grid.Row="8" Grid.Column="2" Classes="OK" />
+
+                <controls:SensorIcon Grid.Row="9" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="9" Grid.Column="1" Classes="Enabled" SensorLabelText="201.168m" />
+                <controls:SensorIcon Grid.Row="9" Grid.Column="2" Classes="OK" />
+
+                <controls:SensorIcon Grid.Row="10" Grid.Column="0" Classes="Error" />
+                <controls:SensorLabel Grid.Row="10" Grid.Column="1" Classes="Enabled"
+                                      SensorLabelText="284.683m" />
+                <controls:SensorIcon Grid.Row="10" Grid.Column="2" Classes="Error" />
+
+                <controls:SensorIcon Grid.Row="11" Grid.Column="0" Classes="OK" />
+                <controls:SensorLabel Grid.Row="11" Grid.Column="1" Classes="Enabled"
+                                      SensorLabelText="304.800m" />
+                <controls:SensorIcon Grid.Row="11" Grid.Column="2" Classes="OK" />
+
+                <controls:SensorIcon Grid.Row="12" Grid.Column="0" Classes="OKInactive" />
+                <controls:SensorLabel Grid.Row="12" Grid.Column="1" Classes="Disabled"
+                                      SensorLabelText="382.219m" />
+                <controls:SensorIcon Grid.Row="12" Grid.Column="2" Classes="OKInactive" />
+
+                <controls:SensorIcon Grid.Row="13" Grid.Column="0" Classes="ErrorInactive" />
+                <controls:SensorLabel Grid.Row="13" Grid.Column="1" Classes="Disabled"
+                                      SensorLabelText="402.336m" />
+                <controls:SensorIcon Grid.Row="13" Grid.Column="2" Classes="ErrorInactive" />
+                
+                <controls:RunSetupLabel Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="3" Classes="TreeMixed" RSLLeftTree=".4 Pro" RSLRightTree=".5 Full" RSLTree=".4 Pro"/>
+                <controls:RunSetupLabel Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" Classes="StartMode" RSLStMode="Auto (7, 0.2)"></controls:RunSetupLabel>
+                <Grid Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="3" ColumnDefinitions="60,Auto,*" HorizontalAlignment="Left">
+                    <Label Grid.Column="0" Classes="StandardLabel" HorizontalAlignment="Right" Content="Remote"/>
+                    <Label Grid.Column="1" Classes="StandardLabel" Content="—"/>
+                    <controls:SensorIcon Grid.Column="2" HorizontalAlignment="Left" Classes="OK"/>
+                </Grid>
+                <controls:RunSetupLabel Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" Classes="Finish" RSLFinish="402.336m"/>
+                <Grid Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="3" ColumnDefinitions="60,Auto,*" HorizontalAlignment="Left">
+                    <Label Grid.Column="0" Classes="StandardLabel" HorizontalAlignment="Right" Content="Display"/>
+                    <Label Grid.Column="1" Classes="StandardLabel" Content="—"/>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                        <Label Classes="StandardLabelDisabled" Content="In"/>
+                        <Label Classes="StandardLabel" Content="RT"/>
+                        <Label Classes="StandardLabel" Content="ET"/>
+                        <Label Classes="StandardLabel" Content="Sp"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!-- Right lane timing data -->
+        <Grid Grid.Row="1" Grid.Column="2" Margin="1,1,1,1" Background="{DynamicResource DetailBackground}"
+              RowDefinitions="Auto,*,*,*,*,*,*,*,*,*,*,*,*,*,*">
+            <controls:CompetitorInfo Grid.Column="0" Grid.Row="0"
+                                     CIRaceNum="4189" CIIndex="14.89" CIClass="SP/ET" CIName="Jon Webster" CIModel="Mustang" CIBackground="{DynamicResource TitleBackground}" />
+            <controls:TimingData Grid.Row="1" TimingLabel="Reaction Time" TimingValue="+3.0256" />
+            <controls:TimingData Grid.Row="2" TimingLabel="18.288m ET" TimingValue="0.9108" />
+            <controls:TimingData Grid.Row="3" TimingLabel="100.584m ET" TimingValue="2.3207" />
+            <controls:TimingData Grid.Row="4" TimingLabel="181.051m ET" TimingValue="3.1796" />
+            <controls:TimingData Grid.Row="5" TimingLabel="201.165m ET" TimingValue="3.3671" />
+            <controls:TimingData Grid.Row="6" TimingLabel="201.165m km/h" TimingValue="385.13" />
+            <controls:TimingData Grid.Row="7" TimingLabel="284.683m ET" TimingValue="4.0740" />
+            <controls:TimingData Grid.Row="8" TimingLabel="304.800m ET" TimingValue="4.2289" />
+            <controls:TimingData Grid.Row="9" TimingLabel="304.800m km/h" TimingValue="467.50" />
+            <controls:TimingData Grid.Row="10" TimingLabel="382.219m ET" TimingValue="4.8217" />
+            <controls:TimingData Grid.Row="11" TimingLabel="402.336m ET" TimingValue="4.9766" Classes="Finish" />
+            <controls:TimingData Grid.Row="12" TimingLabel="402.336m km/h" TimingValue="467.53" Classes="Finish" />
+            <controls:TimingData Grid.Row="13" TimingLabel="Result" TimingValue="WIN" Classes="Finish" />
+        </Grid>
+
+        <!-- Queue Title -->
+        <controls:TitleBar Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" TBLeft="Queued Pair"
+                           TBCategory="Nostalgia Superstock" TBRound="Elimination Round 1" />
+
+        <!-- Queue Left -->
+        <Grid Grid.Row="3" Grid.Column="0" Background="#303030" Margin="1">
+            <controls:CompetitorInfo Grid.Column="0" Grid.Row="0" CIRaceNum="4189" CIIndex="14.89" CIClass="SP/ET"
+                                     CIName="Jon Webster" CIModel="Mustang" CIBackground="{DynamicResource DetailBackground}" />
+        </Grid>
+
+        <!-- Queue pair settings -->
+        <Grid Grid.Row="3" Grid.Column="1" Background="{DynamicResource TitleBackground}" RowDefinitions="*" Margin="0,1,0,1">
+            <Grid Grid.Row="0" ColumnDefinitions="60,*,Auto"
+                  RowDefinitions="Auto,Auto">
+                <controls:RunSetupLabel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Classes="TreeSingle" RSLLeftTree=".4 Pro" RSLRightTree=".5 Full" RSLTree=".4 Pro"/>
+                <controls:RunSetupLabel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Classes="Finish" RSLFinish="402.336m"/>
+            </Grid>
+        </Grid>
+
+        <!-- Queue Right -->
+        <Grid Grid.Row="3" Grid.Column="2" Background="#303030" Margin="1">
+            <controls:CompetitorInfo Grid.Column="0" Grid.Row="0" CIRaceNum="4189" CIIndex="14.89" CIClass="SP/ET"
+                                     CIName="Jon Webster" CIModel="Mustang" CIBackground="{DynamicResource DetailBackground}" />
+        </Grid>
+
+        <!-- Enter Title -->
+        <controls:TitleBar Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" TBLeft="Enter Pair"
+                           TBCategory="Super Twin Top Gas" TBRound="Practice Round 1" />
+
+        <!-- Enter Left -->
+        <Grid Grid.Row="5" Grid.Column="0" Background="{DynamicResource DetailBackground}" Margin="1">
+            <controls:EnterPairControl Grid.Column="0" Grid.Row="0" EPCClass="SP/ET" EPCIndex="88.88"
+                                       EPCModel="Mustang" EPCName="Rene VAN DEN BERG" EPCRaceNum="123" />
+        </Grid>
+
+        <!-- Enter pair settings -->
+        <Grid Grid.Row="5" Grid.Column="1" Background="{DynamicResource TitleBackground}" RowDefinitions="*" Margin="0,1,0,1">
+            <Grid Grid.Row="0" ColumnDefinitions="60,*,*"
+                  RowDefinitions="Auto,Auto">
+                <controls:RunSetupLabel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Classes="TreeMixed" RSLLeftTree=".4 Pro" RSLRightTree=".5 Full" RSLTree=".4 Pro"/>
+                <controls:RunSetupLabel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Classes="Finish" RSLFinish="402.336m"/>
+            </Grid>
+        </Grid>
+
+        <!-- Enter Right -->
+        <Grid Grid.Row="5" Grid.Column="2" Background="{DynamicResource DetailBackground}" Margin="1">
+            <controls:EnterPairControl Grid.Column="0" Grid.Row="0" EPCClass="SP/ET" EPCIndex="88.88"
+                                       EPCModel="Mustang" EPCName="Rene VAN DEN BERG" EPCRaceNum="MMMMMMMM" />
+        </Grid>
+
+        <!-- Button Bar -->
+        <Grid Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*"
+              Background="#3B3B3B" Margin="1,10,1,1">
+            <controls:FunctionButton Grid.Column="0" FBKey="F1" FBLabel="Utilities" />
+            <controls:FunctionButton Grid.Column="1" FBKey="F2" FBLabel="Re-run" />
+            <controls:FunctionButton Grid.Column="2" FBKey="F3" FBLabel="Reset" />
+            <controls:FunctionButton Grid.Column="3" FBKey="F4" FBLabel="Swap" />
+            <controls:FunctionButton Grid.Column="4" FBKey="F5" FBLabel="Queue" />
+            <controls:FunctionButton Grid.Column="5" FBKey="F6" FBLabel="Start" />
+            <controls:FunctionButton Grid.Column="6" FBKey="F7" FBLabel="Setup" />
+            <controls:FunctionButton Grid.Column="7" FBKey="F8" FBLabel="Abort" />
+            <controls:FunctionButton Grid.Column="8" FBKey="F9" FBLabel="Clear" />
+            <controls:FunctionButton Grid.Column="9" FBKey="F10" FBLabel="ENGAGE" />
+        </Grid>
+    </Grid>
+        </Viewbox>
+</Window>
