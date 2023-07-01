@@ -18,6 +18,7 @@
         <StyleInclude Source="/Controls/FunctionButton.axaml"/>
         <StyleInclude Source="/Controls/TitleBar.axaml"/>
         <StyleInclude Source="/Controls/RunSetupLabel.axaml"/>
+        <StyleInclude Source="/Controls/CategoryButton.axaml"/>
         <StyleInclude Source="/TextStyles.axaml"/>
     </Application.Styles>
     

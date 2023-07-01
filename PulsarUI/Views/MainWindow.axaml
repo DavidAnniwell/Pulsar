@@ -203,7 +203,7 @@
         <!-- Button Bar -->
         <Grid Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*"
               Background="#3B3B3B" Margin="1,10,1,1">
-            <controls:FunctionButton Grid.Column="0" FBKey="F1" FBLabel="Utilities" />
+            <controls:FunctionButton Grid.Column="0" FBKey="F1" FBLabel="System" />
             <controls:FunctionButton Grid.Column="1" FBKey="F2" FBLabel="Re-run" />
             <controls:FunctionButton Grid.Column="2" FBKey="F3" FBLabel="Reset" />
             <controls:FunctionButton Grid.Column="3" FBKey="F4" FBLabel="Swap" />

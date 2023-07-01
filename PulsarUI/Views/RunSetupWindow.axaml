@@ -1,0 +1,93 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PulsarUI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:PulsarUI"
+        xmlns:unicode="clr-namespace:Avalonia.Media.TextFormatting.Unicode;assembly=Avalonia.Visuals"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="768"
+        x:Class="PulsarUI.Views.RunSetupWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Run Setup"
+        Background="#252525">
+        
+        <Grid ColumnDefinitions="*,2*">
+                <Grid Column="0" RowDefinitions="*,*,*,*,*,*,*" Background="Yellow">
+                        <Button Grid.Row="0" Content="F1 - Return" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Lime"/>
+                        <Grid Grid.Row="1" Margin="10" ColumnDefinitions="*,*" RowDefinitions="*,*,*" Background="Lime">
+                                <Label Grid.Row="0" Grid.Column="0" Content="F2 - Run Mode" />
+                                <ComboBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                                        <ComboBoxItem Content="Qualifying" />
+                                        <ComboBoxItem Content="Eliminations" />
+                                        <ComboBoxItem Content="Q &amp; E Combo" />
+                                        <ComboBoxItem Content="Practice" />
+                                        <ComboBoxItem Content="Exhibition" />
+                                </ComboBox>
+                                <Label Grid.Row="2" Grid.Column="0" Content="Go To Round:"
+                                       HorizontalAlignment="Stretch" />
+                                <ButtonSpinner Grid.Row="2" Grid.Column="1" Content="88" HorizontalAlignment="Stretch" />
+                                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Last Round: 87" />
+                        </Grid>
+                        <Grid Grid.Row="2" Margin="10" ColumnDefinitions="*,*" Background="Lime">
+                                <Label Grid.Row="0" Grid.Column="0" Content="F3 - Left Tree" />
+                                <ComboBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                                        <ComboBoxItem Content=".4 Pro" />
+                                        <ComboBoxItem Content=".5 Pro" />
+                                        <ComboBoxItem Content=".5 Full" />
+                                        <ComboBoxItem Content="Delay" />
+                                        <ComboBoxItem Content="Crossover" />
+                                </ComboBox>
+                        </Grid>
+                        <Grid Grid.Row="3" Margin="10" ColumnDefinitions="*,*" Background="Lime">
+                                <Label Grid.Row="0" Grid.Column="0" Content="F4 - Right Tree" />
+                                <ComboBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                                        <ComboBoxItem Content=".4 Pro" />
+                                        <ComboBoxItem Content=".5 Pro" />
+                                        <ComboBoxItem Content=".5 Full" />
+                                        <ComboBoxItem Content="Delay" />
+                                        <ComboBoxItem Content="Crossover" />
+                                </ComboBox>
+                        </Grid>
+                        <Grid Grid.Row="4" Margin="10" ColumnDefinitions="*,*" Background="Lime">
+                                <Label Grid.Row="0" Grid.Column="0" Content="F5 - Finish Line" />
+                                <ComboBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">
+                                        <ComboBoxItem Content="18.288m" />
+                                        <ComboBoxItem Content="100.584m" />
+                                        <ComboBoxItem Content="201.168m" />
+                                        <ComboBoxItem Content="304.800m" />
+                                        <ComboBoxItem Content="402.336m" />
+                                </ComboBox>
+                        </Grid>
+                        <Button Grid.Row="5" Content="F6 - Advanced Options" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Lime"/>
+                        <Button Grid.Row="6" Content="F10 - Select Category" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Lime"/>
+                </Grid>
+                <Grid Column="1" ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*" Background="Blue">
+                    <controls:CategoryButton Grid.Row="0" Grid.Column="0" CBCategName="01 - Category One"/>
+                    <controls:CategoryButton Grid.Row="1" Grid.Column="0" CBCategName="02 - Category Two"/>
+                    <controls:CategoryButton Grid.Row="2" Grid.Column="0" CBCategName="03 - Category Three"/>
+                    <controls:CategoryButton Grid.Row="3" Grid.Column="0" CBCategName="04 - Category Four"/>
+                    <controls:CategoryButton Grid.Row="4" Grid.Column="0" CBCategName="05 - Category Five"/>
+                    <controls:CategoryButton Grid.Row="5" Grid.Column="0" CBCategName="06 - Category Six"/>
+                    <controls:CategoryButton Grid.Row="6" Grid.Column="0" CBCategName="07 - Category Seven"/>
+                    <controls:CategoryButton Grid.Row="7" Grid.Column="0" CBCategName="08 - Category Eight"/>
+                    <controls:CategoryButton Grid.Row="8" Grid.Column="0" CBCategName="09 - Category Nine"/>
+                    <controls:CategoryButton Grid.Row="9" Grid.Column="0" CBCategName="10 - Category Ten"/>
+                    <controls:CategoryButton Grid.Row="10" Grid.Column="0" CBCategName="11 - Category Eleven"/>
+                    <controls:CategoryButton Grid.Row="11" Grid.Column="0" CBCategName="12 - Category Twelve"/>
+                    <controls:CategoryButton Grid.Row="0" Grid.Column="1" CBCategName="01 - Category Thirteen"/>
+                    <controls:CategoryButton Grid.Row="1" Grid.Column="1" CBCategName="02 - Category Fourteen"/>
+                    <controls:CategoryButton Grid.Row="2" Grid.Column="1" CBCategName="03 - Category Fifteen"/>
+                    <controls:CategoryButton Grid.Row="3" Grid.Column="1" CBCategName="04 - Category Sixteen"/>
+                    <controls:CategoryButton Grid.Row="4" Grid.Column="1" CBCategName="05 - Category Seventeen"/>
+                    <controls:CategoryButton Grid.Row="5" Grid.Column="1" CBCategName="06 - Category Eighteen"/>
+                    <controls:CategoryButton Grid.Row="6" Grid.Column="1" CBCategName="07 - Category Nineteen"/>
+                    <controls:CategoryButton Grid.Row="7" Grid.Column="1" CBCategName="08 - Category Twenty"/>
+                    <controls:CategoryButton Grid.Row="8" Grid.Column="1" CBCategName="09 - Category Twenty One"/>
+                    <controls:CategoryButton Grid.Row="9" Grid.Column="1" CBCategName="10 - Category Twenty Two"/>
+                    <controls:CategoryButton Grid.Row="10" Grid.Column="1" CBCategName="11 - Category Twenty Three"/>
+                    <controls:CategoryButton Grid.Row="11" Grid.Column="1" CBCategName="12 - Category Twenty Four"/>
+                    
+                </Grid>
+        </Grid>
+        
+</Window>
