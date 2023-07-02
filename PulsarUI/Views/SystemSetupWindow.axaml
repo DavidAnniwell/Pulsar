@@ -1,0 +1,107 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="768"
+        x:Class="PulsarUI.Views.SystemSetupWindow"
+        Title="SystemSetupWindow"
+        Background="Gray">
+    <TabControl TabStripPlacement="Left">
+        <TabItem Header="Test &amp; Diagnostics">
+            <Grid ColumnDefinitions="Auto,*">
+                <!-- Tree control -->
+                <Border Grid.Column="0" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20">
+                    <Grid ColumnDefinitions="50,70,50" RowDefinitions="40,40,65,65,65,65,65" Margin="20">
+                        <Grid.Styles>
+                            <Style Selector="Ellipse">
+                                <Setter Property="StrokeThickness" Value="2"/>
+                                <Setter Property="Stroke" Value="#545454"/>
+                            </Style>
+                        </Grid.Styles>
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        </StackPanel>
+                        <Ellipse Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Fill="Blue" Height="35" Width="35"/>
+                        <Ellipse Grid.Row="2" Grid.Column="0" Fill="Yellow" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="3" Grid.Column="0" Fill="Yellow" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="4" Grid.Column="0" Fill="Yellow" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="5" Grid.Column="0" Fill="Lime" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="6" Grid.Column="0" Fill="Red" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="2" Grid.Column="2" Fill="Yellow" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="3" Grid.Column="2" Fill="Yellow" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="4" Grid.Column="2" Fill="Yellow" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="5" Grid.Column="2" Fill="Lime" Height="50" Width="50"/>
+                        <Ellipse Grid.Row="6" Grid.Column="2" Fill="Red" Height="50" Width="50"/>
+                    </Grid>
+                </Border>
+                <Grid Grid.Column="1" ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,10,Auto,10,Auto" Margin="20">
+                    <!-- Scoreboard control -->
+                    <Grid.Styles>
+                        <Style Selector="TextBox">
+                            <Setter Property="FontSize" Value="53"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="#dddddd"/>
+                            <Setter Property="Margin" Value="2"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="BorderThickness" Value="3"/>
+                            <Setter Property="Padding" Value="0"/>
+                        </Style>
+                    </Grid.Styles>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Left ET/RT"/>
+                    <TextBox Grid.Row="1" Grid.Column="0" Text="88.888"/>
+                    <Label Grid.Row="0" Grid.Column="1" Content="Right ET/RT"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="88.888"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Left Speed/Index"/>
+                    <TextBox Grid.Row="3" Grid.Column="0" Text="888.88"/>
+                    <Label Grid.Row="2" Grid.Column="1" Content="Left Speed/Index"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" Text="888.88"/>
+                    
+                    <StackPanel Grid.Row ="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Label Content="System Test Sequence"/>
+                        <Button>
+                            <PathIcon Data="{StaticResource PlayRegular}" />
+                        </Button>
+                        <Button>
+                            <PathIcon Data="{StaticResource StopRegular}" />
+                        </Button>
+                    </StackPanel>
+                    
+                    <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Startline Alignment Mode"/>
+                </Grid>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Devices &amp; IO">
+            <Rectangle Width="300" Height="200" Fill="Green"/>
+        </TabItem>
+        <TabItem Header="Timing Points">
+            <Rectangle Width="300" Height="200" Fill="Magenta"/>
+        </TabItem>
+        <TabItem Header="Categories">
+            <Rectangle Width="300" Height="200" Fill="Lime"/>
+        </TabItem>
+        <TabItem Header="Classes">
+            <Rectangle Width="300" Height="200" Fill="Red"/>
+        </TabItem>
+        <TabItem Header="Racers">
+            <Rectangle Width="300" Height="200" Fill="Blue"/>
+        </TabItem>
+        <TabItem Header="Miscellaneous">
+            <Rectangle Width="300" Height="200" Fill="Black"/>
+        </TabItem>
+    </TabControl>
+</Window>
