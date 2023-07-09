@@ -6,33 +6,34 @@
         x:Class="PulsarUI.Views.SystemSetupWindow"
         Title="SystemSetupWindow"
         Background="Gray">
+    
     <TabControl TabStripPlacement="Left">
         <TabItem Header="Test &amp; Diagnostics">
             <Grid ColumnDefinitions="Auto,*">
                 <!-- Tree control -->
                 <Border Grid.Column="0" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20">
-                    <Grid ColumnDefinitions="50,70,50" RowDefinitions="40,40,65,65,65,65,65" Margin="20">
+                    <Grid ColumnDefinitions="60,70,60" RowDefinitions="40,40,65,65,65,65,65" Margin="20">
                         <Grid.Styles>
                             <Style Selector="Ellipse">
                                 <Setter Property="StrokeThickness" Value="2"/>
                                 <Setter Property="Stroke" Value="#545454"/>
                             </Style>
                         </Grid.Styles>
-                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
                         </StackPanel>
-                        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
                         </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
                         </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
-                            <Ellipse Fill="White" Height="25" Width="25" Margin="2" />
+                        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
+                            <Ellipse Fill="White" Height="23" Width="23" Margin="2" />
                         </StackPanel>
                         <Ellipse Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Fill="Blue" Height="35" Width="35"/>
                         <Ellipse Grid.Row="2" Grid.Column="0" Fill="Yellow" Height="50" Width="50"/>
@@ -86,19 +87,113 @@
             </Grid>
         </TabItem>
         <TabItem Header="Devices &amp; IO">
-            <Rectangle Width="300" Height="200" Fill="Green"/>
+            <StackPanel Orientation="Vertical">
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Status"/>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Manufacturer"/>
+                        <DataGridTextColumn Header="Model"/>
+                        <DataGridTextColumn Header="Serial #"/>
+                        <DataGridTextColumn Header="IPv4 Address"/>
+                        <DataGridTextColumn Header="MAC Address"/>
+                        <DataGridTextColumn Header="IO Ports"/>
+                        <DataGridTextColumn Header="Input Ports"/>
+                        <DataGridTextColumn Header="Output Ports"/>
+                        <DataGridTextColumn Header="Certification"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Status"/>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Device ID"/>
+                        <DataGridTextColumn Header="Direction"/>
+                        <DataGridTextColumn Header="Virtual"/>
+                        <DataGridTextColumn Header="Timing Point"/>
+                        <DataGridTextColumn Header="Lane"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         </TabItem>
         <TabItem Header="Timing Points">
-            <Rectangle Width="300" Height="200" Fill="Magenta"/>
+            <StackPanel Orientation="Vertical">
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Distance"/>
+                        <DataGridTextColumn Header="Description"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Timing Point"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Start"/>
+                        <DataGridTextColumn Header="Stop"/>
+                        <DataGridTextColumn Header="Length"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         </TabItem>
         <TabItem Header="Categories">
-            <Rectangle Width="300" Height="200" Fill="Lime"/>
+            <DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID"/>
+                    <DataGridTextColumn Header="Order"/>
+                    <DataGridTextColumn Header="Name"/>
+                    <DataGridTextColumn Header="Finish"/>
+                    <DataGridTextColumn Header="Bump"/>
+                    <DataGridTextColumn Header="Tree"/>
+                    <DataGridTextColumn Header="Elim Mode"/>
+                    <DataGridTextColumn Header="Split Tree"/>
+                    <DataGridTextColumn Header="Always Stagger"/>
+                    <DataGridTextColumn Header="Start Mode"/>
+                    <DataGridTextColumn Header="Stage Freeze"/>
+                    <DataGridTextColumn Header="DS Foul"/>
+                    <DataGridTextColumn Header="SB Elim Speed"/>
+                    <DataGridTextColumn Header="SB Units"/>
+                    <DataGridTextColumn Header="Worst Foul"/>
+                    <DataGridTextColumn Header="Foul in Empty"/>
+                    <DataGridTextColumn Header="AS Settle"/>
+                    <DataGridTextColumn Header="AS Timeout"/>
+                    <DataGridTextColumn Header="Default Class"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </TabItem>
         <TabItem Header="Classes">
-            <Rectangle Width="300" Height="200" Fill="Red"/>
+            <DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID"/>
+                    <DataGridTextColumn Header="Category"/>
+                    <DataGridTextColumn Header="Name"/>
+                    <DataGridTextColumn Header="201m Min"/>
+                    <DataGridTextColumn Header="201m Max"/>
+                    <DataGridTextColumn Header="305m Min"/>
+                    <DataGridTextColumn Header="305m Max"/>
+                    <DataGridTextColumn Header="402m Min"/>
+                    <DataGridTextColumn Header="402m Max"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </TabItem>
         <TabItem Header="Racers">
-            <Rectangle Width="300" Height="200" Fill="Blue"/>
+            <DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID"/>
+                    <DataGridTextColumn Header="Category"/>
+                    <DataGridTextColumn Header="Race #"/>
+                    <DataGridTextColumn Header="Class"/>
+                    <DataGridTextColumn Header="Name"/>
+                    <DataGridTextColumn Header="Vehicle"/>
+                    <DataGridTextColumn Header="Indv. Index"/>
+                    <DataGridTextColumn Header="Pref. Tree"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </TabItem>
         <TabItem Header="Miscellaneous">
             <Rectangle Width="300" Height="200" Fill="Black"/>

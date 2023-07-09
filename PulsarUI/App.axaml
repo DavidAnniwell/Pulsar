@@ -7,7 +7,7 @@
     </Application.DataTemplates>
 
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme/>
         <StyleInclude Source="/Controls/TimingData.axaml"/>
         <StyleInclude Source="/Controls/SensorLabel.axaml"/>
         <StyleInclude Source="/Controls/SensorIcon.axaml"/>
@@ -20,6 +20,7 @@
         <StyleInclude Source="/Controls/RunSetupLabel.axaml"/>
         <StyleInclude Source="/Controls/CategoryButton.axaml"/>
         <StyleInclude Source="/TextStyles.axaml"/>
+        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
     </Application.Styles>
     
     <Application.Resources>

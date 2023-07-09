@@ -19,3 +19,4 @@ public partial class SystemSetupWindow : Window
         AvaloniaXamlLoader.Load(this);
     }
 }
+
