@@ -201,7 +201,7 @@
         </Grid>
 
         <!-- Button Bar -->
-        <Grid Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*"
+        <Grid Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*,*,*"
               Background="#3B3B3B" Margin="1,10,1,1">
             <controls:FunctionButton Grid.Column="0" FBKey="F1" FBLabel="System" />
             <controls:FunctionButton Grid.Column="1" FBKey="F2" FBLabel="Re-run" />
@@ -213,6 +213,8 @@
             <controls:FunctionButton Grid.Column="7" FBKey="F8" FBLabel="Abort" />
             <controls:FunctionButton Grid.Column="8" FBKey="F9" FBLabel="Clear" />
             <controls:FunctionButton Grid.Column="9" FBKey="F10" FBLabel="ENGAGE" />
+            <controls:FunctionButton Grid.Column="10" FBKey="F11" FBLabel="Clear Queue" />
+            <controls:FunctionButton Grid.Column="11" FBKey="F12" FBLabel="SwiftSet" />
         </Grid>
     </Grid>
         </Viewbox>

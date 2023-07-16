@@ -118,20 +118,23 @@
         </TabItem>
         <TabItem Header="Timing Points">
             <StackPanel Orientation="Vertical">
-                <DataGrid>
+                <Label Content="Timing Points"/>
+                <DataGrid Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID"/>
                         <DataGridTextColumn Header="Distance"/>
                         <DataGridTextColumn Header="Description"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid>
+                <Label Content="Finish Lines"/>
+                <DataGrid Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID"/>
                         <DataGridTextColumn Header="Timing Point"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid>
+                <Label Content="Speed Traps"/>
+                <DataGrid Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID"/>
                         <DataGridTextColumn Header="Start"/>
@@ -142,44 +145,46 @@
             </StackPanel>
         </TabItem>
         <TabItem Header="Categories">
-            <DataGrid>
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID"/>
-                    <DataGridTextColumn Header="Order"/>
-                    <DataGridTextColumn Header="Name"/>
-                    <DataGridTextColumn Header="Finish"/>
-                    <DataGridTextColumn Header="Bump"/>
-                    <DataGridTextColumn Header="Tree"/>
-                    <DataGridTextColumn Header="Elim Mode"/>
-                    <DataGridTextColumn Header="Split Tree"/>
-                    <DataGridTextColumn Header="Always Stagger"/>
-                    <DataGridTextColumn Header="Start Mode"/>
-                    <DataGridTextColumn Header="Stage Freeze"/>
-                    <DataGridTextColumn Header="DS Foul"/>
-                    <DataGridTextColumn Header="SB Elim Speed"/>
-                    <DataGridTextColumn Header="SB Units"/>
-                    <DataGridTextColumn Header="Worst Foul"/>
-                    <DataGridTextColumn Header="Foul in Empty"/>
-                    <DataGridTextColumn Header="AS Settle"/>
-                    <DataGridTextColumn Header="AS Timeout"/>
-                    <DataGridTextColumn Header="Default Class"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </TabItem>
-        <TabItem Header="Classes">
-            <DataGrid>
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID"/>
-                    <DataGridTextColumn Header="Category"/>
-                    <DataGridTextColumn Header="Name"/>
-                    <DataGridTextColumn Header="201m Min"/>
-                    <DataGridTextColumn Header="201m Max"/>
-                    <DataGridTextColumn Header="305m Min"/>
-                    <DataGridTextColumn Header="305m Max"/>
-                    <DataGridTextColumn Header="402m Min"/>
-                    <DataGridTextColumn Header="402m Max"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <StackPanel Orientation="Vertical">
+                <Label Content="Categories"/>
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Order"/>
+                        <DataGridTextColumn Header="Name"/>
+                        <DataGridTextColumn Header="Finish"/>
+                        <DataGridTextColumn Header="Bump"/>
+                        <DataGridTextColumn Header="Tree"/>
+                        <DataGridTextColumn Header="Elim Mode"/>
+                        <DataGridTextColumn Header="Split Tree"/>
+                        <DataGridTextColumn Header="Always Stagger"/>
+                        <DataGridTextColumn Header="Start Mode"/>
+                        <DataGridTextColumn Header="Stage Freeze"/>
+                        <DataGridTextColumn Header="DS Foul"/>
+                        <DataGridTextColumn Header="SB Elim Speed"/>
+                        <DataGridTextColumn Header="SB Units"/>
+                        <DataGridTextColumn Header="Worst Foul"/>
+                        <DataGridTextColumn Header="Foul in Empty"/>
+                        <DataGridTextColumn Header="AS Settle"/>
+                        <DataGridTextColumn Header="AS Timeout"/>
+                        <DataGridTextColumn Header="Default Class"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Label Content="Classes"/>
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Category"/>
+                        <DataGridTextColumn Header="Name"/>
+                        <DataGridTextColumn Header="201m Min"/>
+                        <DataGridTextColumn Header="201m Max"/>
+                        <DataGridTextColumn Header="305m Min"/>
+                        <DataGridTextColumn Header="305m Max"/>
+                        <DataGridTextColumn Header="402m Min"/>
+                        <DataGridTextColumn Header="402m Max"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         </TabItem>
         <TabItem Header="Racers">
             <DataGrid>
@@ -190,7 +195,7 @@
                     <DataGridTextColumn Header="Class"/>
                     <DataGridTextColumn Header="Name"/>
                     <DataGridTextColumn Header="Vehicle"/>
-                    <DataGridTextColumn Header="Indv. Index"/>
+                    <DataGridTextColumn Header="Indiv. Index"/>
                     <DataGridTextColumn Header="Pref. Tree"/>
                 </DataGrid.Columns>
             </DataGrid>
